@@ -4,26 +4,32 @@ const projects = [
     {
         title : "Website Portfolio",
         description : "This is a portfolio website.",
-        tools : ["HTML/CSS", "JavaScript"],
+        tools : "HTML/CSS, JavaScript",
         repository : "https://github.com/bryglennmalz/portfolio"
     },
     {
         title : "Survey Form",
         description : "This is a project from free code camp. Build a survey form to collect data from users. ",
-        tools : ["HTML/CSS"],
+        tools : "HTML/CSS",
         repository : "https://github.com/bryglennmalz/survey-form"
     },
     {
         title : "Tribute Page",
         description : "This is a project from free code camp. Build a tribute page for a subject.",
-        tools : ["HTML/CSS"],
+        tools : "HTML/CSS",
         repository : "https://github.com/bryglennmalz/tribute-page"
     },
     {
         title : "Build a Technical Documentation Page",
         description : "This is a project from free code camp. Build a technical documentation page that serve as instruction or reference for a topic.",
-        tools : ["HTML/CSS"],
+        tools : "HTML/CSS",
         repository : "https://github.com/bryglennmalz/technical-documentation-page"
+    },
+    {
+        title : "CMU ALUMnet: Alumni Tracking and Information System",
+        description : "This is a capstone project. This an alumni tracking website of Central Mindanao University. This is where alumnio can create their own account to connect other alumni and be able to answer university surveys and forums.",
+        tools : "HTML/CSS, Bootstrap, Javascript, jQuery, MySQL, PHP PDO",
+        repository : "https://github.com/bryglennmalz/Alumni-Tracking-System"
     }
 ]
 
