@@ -300,22 +300,25 @@ nav>ol>li>a:hover{
 }
 
 .contactFlexItem:first-of-type{
-  display: grid;
+  display: flex;
   width: 94%;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   gap: 5%;
   margin: 3%;
 }
 
-.contactFlexItem:first-of-type button[type="button"]{
-  padding: 1%;
+.contactFlexItem:first-of-type .contactButton{
+  padding: 10px;
   margin: 1%;
   font-size: 1.5em;
   background-color: var(--color4);
   color: var(--color1);
+}
+
+.contactButton i{
+  padding: 10px 0;
+  margin: 10px 0;
 }
 
 .contactFlexItem:first-of-type button[type="button"]:hover{
@@ -325,31 +328,41 @@ nav>ol>li>a:hover{
 }
 
 .contactFlexItem:last-of-type{
-  width: 94%;
+  width: 93%;
   border: 3px double var(--color3);
-  margin: 3% auto;
   position: relative;
+  margin: 3% auto;
   overflow: hidden;
 }
+
 form{
-  width: 95%;
-  margin: 1% auto;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
+  position: relative;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-span{
-  margin-top: 3%;
+  width: 98%;
+  margin: 0 auto;
+  padding: 30px 3% 0px 3%;
+  align-content: center;
+  align-items: center;
 }
 
 .contact-span:last-of-type{
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  align-content: center;
+  padding: 3%;
 }
 
+
 input:not([type=checkbox]), textarea{
-  width: 97%;
+  width: 100%;
   font-size: 1.2em;
   padding: 1%;
   margin: 1% auto;
@@ -424,8 +437,7 @@ footer{
   }
 
   .contactContainer .contactFlexItem{
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
