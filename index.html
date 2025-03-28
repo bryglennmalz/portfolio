@@ -200,13 +200,13 @@
                 <button type="button" onclick="window.open('https://www.linkedin.com/in/bryan-glen-malong/', '_blank')"  class="contactButton"><i class="fa-brands fa-linkedin fa-2xl"></i> LinkedIn</button>
             </div>
             <div class="contactFlexItem">
-                <form action="" method="post">
+                <form onsubmit="emailSend(); reset(); return false;">
                     <div class="contact-span">
-                        <label for="full-name">Fullname:</label>
+                        <label for="full-name">Your fullname:</label>
                         <input type="text" id="full-name" name="fullname" placeholder="Juan dela Cruz" autocomplete="off" required>
                     </div>
                     <div class="contact-span">
-                        <label for="e-mail">Email:</label>
+                        <label for="e-mail">Your email:</label>
                         <input type="email" id="e-mail" name="email" placeholder="email@example.com" autocomplete="off" required>
                     </div>
                     <div class="contact-span">
@@ -225,7 +225,8 @@
     <footer>
 
     </footer>
-    <script src="https://kit.fontawesome.com/508aec728b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/508aec728b.js"             crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>

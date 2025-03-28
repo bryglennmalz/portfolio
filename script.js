@@ -1,4 +1,11 @@
 const projectContainer = document.getElementById('projectContainer');
+const homeNav = document.getElementById('home-link');
+const skillsNav = document.getElementById('skills-link');
+const projectsNav = document.getElementById('projects-link');
+const contactsNav = document.getElementById('contact-link');
+const navClass = document.querySelector('.nav');
+
+
 
 const projects = [
     {
@@ -33,6 +40,77 @@ const projects = [
     }
 ]
 
+const activeHome = () => {
+    if(skillsNav.classList.contains('active')){
+        skillsNav.classList.remove('active')
+    }
+    if(projectsNav.classList.contains('active')){
+        projectsNav.classList.remove('active')
+
+    }
+    if(contactsNav.classList.contains('active')){
+        contactsNav.classList.remove('active')
+    }
+    if(!homeNav.classList.contains('active')){
+        homeNav.classList.add('active');
+    }
+}
+
+const activeSkills = () => {
+    if(homeNav.classList.contains('active')){
+        homeNav.classList.remove('active')
+    }
+    if(projectsNav.classList.contains('active')){
+        projectsNav.classList.remove('active')
+
+    }
+    if(contactsNav.classList.contains('active')){
+        contactsNav.classList.remove('active')
+    }
+    if(!skillsNav.classList.contains('active')){
+        skillsNav.classList.add('active');
+    }
+}
+
+const activeProjects = () => {
+    if(homeNav.classList.contains('active')){
+        homeNav.classList.remove('active')
+    }
+    if(skillsNav.classList.contains('active')){
+        skillsNav.classList.remove('active')
+
+    } 
+    if(contactsNav.classList.contains('active')){
+        contactsNav.classList.remove('active')
+    }
+    if(!projectsNav.classList.contains('active')){
+        projectsNav.classList.add('active');
+    }
+}
+
+const activeContacts = () => {
+    if(homeNav.classList.contains('active')){
+        homeNav.classList.remove('active')
+    }
+    if(skillsNav.classList.contains('active')){
+        skillsNav.classList.remove('active')
+
+    } 
+    if(projectsNav.classList.contains('active')){
+        projectsNav.classList.remove('active')
+    }
+    if(!contactsNav.classList.contains('active')){
+        contactsNav.classList.add('active');
+    }
+}
+
+/* Navigation button clicked */
+homeNav.addEventListener("click", activeHome);
+skillsNav.addEventListener("click", activeSkills);
+projectsNav.addEventListener("click", activeProjects);
+contactsNav.addEventListener("click", activeContacts);
+
+
 
 function showProjects(){
     var projectText = ``;
@@ -53,6 +131,24 @@ function showProjects(){
         `;
     }
     return projectText
+}
+
+function sendEmail(){
+    const fullName = document.getElementById('full-name');
+    const eMail = document.getElementById('e-mail');
+    const message = document.getElementById('message');
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "bryanglenmalong@gmail.com",
+        Password : "A498C52E4D2693C0E79F46CC7255ED0AC121",
+        To : 'bryanglenmalong@gmail.com',
+        From : 'bryanglenmalong@gmail.com',
+        Subject : `Contact Us: ${fullName.value} want to connect with you`,
+        Body : `${message.value}`
+    }).then(
+      message => alert(message)
+    );
 }
 
 projectContainer.innerHTML = showProjects();
